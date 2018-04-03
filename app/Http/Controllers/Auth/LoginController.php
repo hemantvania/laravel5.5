@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\UserDetails;
 
 class LoginController extends Controller
 {
@@ -63,4 +64,14 @@ class LoginController extends Controller
             'password' => 'required|string',
         ]);
     }
+
+    protected function authenticated(Request $request, $user)
+    {
+        if($user->UserDetails == null)
+        {
+            return redirect()->route('userDetails');
+            exit;
+        }
+    }
+
 }

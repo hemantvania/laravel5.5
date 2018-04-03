@@ -28,4 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/test','HomeController@test');
 
+Route::get('register-details', 'HomeController@userDetails')->name('userDetails');
+
+Route::post('register-details','HomeController@RegisterDetails');
+
 //Route::name('password.email')->post('password/email', 'Auth\ForgotPasswordController@resetPassword');
