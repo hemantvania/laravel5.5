@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\MailResetPasswordToken;
+use Auth;
 
 
 class User extends Authenticatable
@@ -43,5 +44,17 @@ class User extends Authenticatable
     public function userDetails()
     {
         return $this->hasOne('App\UserDetails');
+    }
+
+    public function role()
+    {
+        return $this->hasOne('App\UserRoles');
+    }
+
+    public static function getUsers()
+    {
+        return User::where('id', '!=', Auth::user()->id)
+            ->with('userDetails')
+            ->get();
     }
 }

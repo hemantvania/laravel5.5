@@ -33,4 +33,10 @@ Route::get('register-details', 'HomeController@userDetails')->name('userDetails'
 
 Route::post('register-details','HomeController@RegisterDetails');
 
+Route::prefix('admin')->group(function () {
+    Route::get('dashboard', 'AdminConroller@dashboard')->name('dashboard');
+    Route::get('users', 'AdminConroller@users')->name('users');
+
+});
+
 //Route::name('password.email')->post('password/email', 'Auth\ForgotPasswordController@resetPassword');

@@ -17,11 +17,14 @@ class isVeified
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->UserDetails == null)
+        if(Auth::user()->role == 1) // 1 = admin
         {
+            return redirect('/admin/dashboard');
 
-            return redirect('/register-details');
-            exit;
+        }elseif(Auth::user()->UserDetails == null){
+
+            return redirect()->route('userDetails');
+
         }
         return $next($request);
     }
