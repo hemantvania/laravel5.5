@@ -24,7 +24,8 @@ Auth::routes();
 //Route::get('/login','UsersController@login')->name('user-login');
 //Route::get('/register','UsersController@register')->name('user-register');
 //Route::post('register','UsersController@create')->name('user-create');
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('isVeified');
 
 Route::get('/test','HomeController@test');
 
