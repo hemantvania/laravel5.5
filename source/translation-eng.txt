@@ -1,0 +1,11 @@
+STUDENT INTETFACE
+
+COMMUNICATIONS TOOL
+
+Vapauta viestintä-jä näyatonjakotonimintoja oppilaiden  = release communication-show the performance of the students
+viestin lähetys = sending a message
+näytön jako = screen sharing
+loki = log
+tapahtuma = event   e
+pulpetti = ePulpit 
+Aikaleima = Time stamp

@@ -1,0 +1,353 @@
+body{
+     background-color: #ffffff;
+}
+.schoolnav {
+    margin-bottom: 0px;
+    min-height: 20px;
+}
+
+/*.dataTables_filter, .dataTables_info { display: none; }*/
+#materiallist_filter,#materiallist_info,#users-table_filter,#users-table_length,#schoollist_filter,#schoollist_length,#teachers_list_length,#teachers_list_filter,#student_list_length,#student_list_filter,#classeslist_length,#classeslist_filter,
+#studentlist_filter,#studentlist_length,
+#material-table_length,#material-table_filter,#notificationlist_filter,#students_list_filter,#students_list_length,#materialsreportlist_filter,#materialsreportlist_length
+#reprots-table_length ,#reprots-table_filter
+{
+    display: none;
+}
+.dataTables_length {
+    display: none;
+}
+.gridtable thead tr, .gridtable-student thead tr {
+    text-transform: uppercase;
+}
+html, body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+.main-content-wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -51px;
+}
+#push, footer {
+    height: 51px;
+}
+
+.scroll-main-wrapper {height: calc(100vh - 194px); overflow-y: auto; position:relative; overflow-x: hidden; padding: 15px 0;}
+.scroll-main-wrapper2 {height: calc(100vh - 158px); overflow-y: auto; position:relative; overflow-x: hidden; padding: 15px 0;}
+.scroll-main-wrapper3 {height: calc(100vh - 157px); overflow-y: auto; position:relative; overflow-x: hidden; padding: 0;}
+.box-title { display: block; width: 100%; margin: 0; padding: 20px 15px; color: #FFFFFF;}
+.personal-info-header { display: block; width: 100%; margin: 0; padding: 10px 15px; font-size: 22px; color:#ffffff;}
+.pulpetit-main .form-group label {color:#ffffff;}
+
+.picture-upload-cust { width: 100%; display: block; position: relative; text-align: center;}
+.picture-upload-cust img {max-width: 100%; display: block; margin: 0 auto;}
+.picture-remove { position: absolute; top:0; right:0; padding: 0; margin: 0; background-color: transparent; }
+.browse-picture-cust {width: 100%; display: block; margin-top: 10px; text-align: center;    }
+label em { color: #FF0000; }
+table.dataTable {
+    background-color: #ffffff;
+}
+.materialtable  {height: calc(100vh - 285px); overflow-y: auto; position:relative; overflow-x: hidden;}
+.materialtable2  {height: calc(100vh - 196px); overflow-y: auto; position:relative; overflow-x: hidden;}
+
+.alert-message { z-index: 999;}
+.gridtable,.table-bordered, .gridtable-student{
+    text-transform: capitalize;
+}
+#global_search {
+    border-radius: 0;
+}
+#but-stop-click {
+    line-height: 18px;
+}
+#materiallist_wrapper .row:first-child{
+    display: none;
+}
+.media-left, .media-right, .media-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.custom-btn{
+    padding: 8px 12px!important;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    text-transform: capitalize!important;
+}
+
+/*loader*/
+.loading-mask {
+    position: relative;
+}
+
+.loading-mask::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:99;
+    display:block;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+
+.loading-mask::after {
+    content: "";
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent rgb(0, 112, 184) rgb(0, 112, 184);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    animation: 2s linear 0s normal none infinite running spin;
+    -ms-animation: 2s linear 0s normal none infinite running spin;
+    -o-animation: 2s linear 0s normal none infinite running spin;
+    -moz-animation: 2s linear 0s normal none infinite running spin;
+    -webkit-: 2s linear 0s normal none infinite running spin;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-name:spin;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(0 0 2 rgba(0, 0, 0, 0.33));
+    z-index:99;
+}
+
+/*loader*/
+
+.filter-option { /*text-transform: uppercase;*/}
+
+/*404page*/
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+/*404page*/
+
+/* teacher notification tab*/
+#notificationlist_filter { display: none;}
+#materiallist_wrapper .bootstrap-select > .dropdown-toggle {z-index: 0; }
+/*24-Oct-2017*/
+.bs-example .nav-tabs-responsive > li > a {text-transform: inherit; font-size: 15px;}
+.icon1, .icon2, .icon3 { padding:7px 20px 7px 50px !important; background-size: 30px auto; }
+.share-filter .bootstrap-select > .dropdown-toggle {text-transform: uppercase;}
+.btn-default { text-transform: uppercase;}
+
+.message-option .btn-default, .flag-options .btn-default { text-transform: inherit;}
+.modal-static { margin-top: 10%; }
+.modal-static .modal-content {
+    text-align: center;
+    color: #be163a;
+}
+.pauseClass {
+    color: #fff;
+}
+
+#class_paused .modal-body, #class_end .modal-body {border-left: 7px solid #c6c6c6; border-right: 7px solid #c6c6c6;}
+#class_paused .pauseClass .material-icons {color: #ffffff; background-color: #6bcb78; font-size: 64px; margin-top: 20px;}
+#class_end .pauseClass .material-icons {color: #ffffff; background-color: #6bcb78; font-size: 64px; margin-top: 20px;}
+#class_paused .modal-body h2 {color: #004A90; font-size: 24px; margin-top: 10px;}
+#class_end .modal-body h2 {color: #004A90; font-size: 24px; margin-top: 10px; margin-bottom: 25px;}
+#class_paused .modal-header, #class_paused .modal-footer, #class_end .modal-header, #class_end .modal-footer {border:0px;}
+.btn-dropdown {padding: 8px 12px; text-transform: none !important; }
+
+/**
+ * For the Lock Class
+ */
+#class_locked .modal-body {border-left: 7px solid #c6c6c6; border-right: 7px solid #c6c6c6;}
+#class_locked .pauseClass .material-icons {color: #ffffff; background-color: #6bcb78; font-size: 64px; margin-top: 20px;}
+#class_locked .pauseClass .material-icons {color: #ffffff; background-color: #6bcb78; font-size: 64px; margin-top: 20px;}
+#class_locked .modal-body h2 {color: #004A90; font-size: 24px; margin-top: 10px;}
+#class_locked .modal-body h2 {color: #21bbe6; font-size: 24px; margin-top: 10px; margin-bottom: 25px;}
+#class_locked .modal-header, #class_locked .modal-footer  {border:0px;}
+
+
+/**
+ * End here
+ */
+#online_students li input[type="checkbox"], input[type="radio"] { margin-right: 10px;}
+#share_screen_students li input[type="checkbox"]  { margin-right: 10px;}
+.message-option #chat_students .dropdown-custom ul li {padding: 0 8px;}
+/**
+ *  Chat select dropdown start here
+ */
+.chatdropdown {
+    position: absolute;
+    top:10%;
+    right:18%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.chatdropdown dd,
+.chatdropdown dt {
+    margin: 0px;
+    padding: 0px;
+}
+
+.chatdropdown ul {
+    margin: -1px 0 0 0;
+}
+
+.chatdropdown dd {
+    position: relative;
+}
+
+.chatdropdown a,
+.chatdropdown a:visited {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.chatdropdown dt a {
+    background-color: #4F6877;
+    display: block;
+    padding: 8px 20px 5px 10px;
+    min-height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    border: 0;
+    width: 272px;
+}
+
+.chatdropdown dt a span,
+.multiSel span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 3px 2px 0;
+}
+
+.chatdropdown dd ul {
+    background-color: #4F6877;
+    border: 0;
+    color: #fff;
+    display: none;
+    left: 0px;
+    padding: 2px 15px 2px 5px;
+    position: absolute;
+    top: 2px;
+    width: 280px;
+    list-style: none;
+    height: 100px;
+    overflow: auto;
+}
+
+.chatdropdown span.value {
+    display: none;
+}
+
+.chatdropdown dd ul li a {
+    padding: 5px;
+    display: block;
+}
+
+.chatdropdown dd ul li a:hover {
+    background-color: #fff;
+}
+
+.btn-chat-start {
+    background-color: #6BBE92;
+    width: 302px;
+    border: 0;
+    padding: 10px 0;
+    margin: 5px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+/*end here*/
+/*27-10-17*/
+.studentChatBox .media {margin: 0;}
+.studentChatBox .media button.close {font-size: 35px;position: absolute;right: 10px;top: 0;opacity: 1;}
+.studentChatBox .msg-section {float: none; width: 100%;}
+.studentChatBox .media-left i {color: #225e9f;font-size: 70px;}
+.studentChatBox .media-left {padding-right: 30px;}
+.studentChatBox .msg-section h4 {font-weight: bold; margin-bottom: 10px; font-size: 16px;}
+.studentChatBox .msg-link { text-transform: uppercase;}
+/*27-10-17 end*/
+/*31-10-17*/
+.upload_material { margin-top: 20px;}
+.student-materialtable { height: calc(100vh - 280px); overflow-y: auto; position: relative; overflow-x: hidden; }
+.profile-tab { height: calc(100vh - 223px);}
+.pulpetit-main textarea, #material_upload textarea { width:100%}
+.btn-multi-school { color: #fff; background-color: #3097D1; border-color: #2a88bd; border-radius: 0px !important;}
+.marbot { margin-bottom: 10px;}
+.chat_time {
+    position: relative;
+    right: 0;
+    width: auto;
+    text-align: center;
+    float: right;
+}
+#chat_students .dropdown ,#share_screen .dropdown{
+    display: block!important;
+}
+
+.communication-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.gridtable-student thead {
+    background: #E4E4E4;
+}
+.student-materialtable table {
+    background: #FFFFFF;
+}
+.form-group label {
+    color: #FFFFFF;
+}
+.teacher-search-type label,.control-label{
+    color: #000000;
+}
+.teacher-search-owner label,.control-label {
+    color: #000000;
+}
+.chart-bg {
+    background: #FFFFFF;
+    padding: 15px;
+}
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+    color: #cc0000;
+}
+.cust_right_login .img-responsive {max-width: 400px; margin: 0 auto;}
+.chat-cancel-btn{
+    padding: 6px 20px 7px 20px;
+    text-transform: uppercase;
+}
+.chat-theme-btn {
+    background: #6bcb78;
+}
+.about-page p {
+     color: #FFFFFF; text-align: justify;
+}
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 15px !important;
+    white-space: nowrap !important;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 10px 0 !important;
+    white-space: nowrap !important;
+}
+.studentChatBox .media-left, .studentChatBox .media-right, .studentChatBox .media-body {vertical-align: top !important;}
+.login-page {
+    border-bottom:0px!important;
+}
+.error-message { color: #FF0000;}

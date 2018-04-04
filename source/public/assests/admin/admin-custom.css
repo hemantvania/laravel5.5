@@ -1,0 +1,53 @@
+.loadmoreimg {background:#f6f2ef;height: 100%;position: fixed;text-align: center;width: 100%;z-index:99999999;left:0;top:0;opacity:0.7}
+.loadmoreimg img { height: 31px; left: 50%; margin-left: -16px; margin-top: -16px; position: absolute; top: 50%; width: 31px; }
+/*loader*/
+.loading-mask {
+    position: relative;
+}
+
+.loading-mask::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:99;
+    display:block;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+
+.loading-mask::after {
+    content: "";
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent rgb(0, 112, 184) rgb(0, 112, 184);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    animation: 2s linear 0s normal none infinite running spin;
+    -ms-animation: 2s linear 0s normal none infinite running spin;
+    -o-animation: 2s linear 0s normal none infinite running spin;
+    -moz-animation: 2s linear 0s normal none infinite running spin;
+    -webkit-: 2s linear 0s normal none infinite running spin;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-name:spin;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(0 0 2 rgba(0, 0, 0, 0.33));
+    z-index:99;
+}
+
+/*loader*/
