@@ -20,20 +20,11 @@
             @foreach($users as $user)
             <tr>
                 <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
+                <td><a href="{{ url('admin/view-user/userid/'.$user->id) }}" title="View User Details">{{ $user->email }}</a></td>
                 <td>{{ $user->mobile_no }}</td>
-                <td>
-                    @if($user->userDetails)
-                    {{ $user->userDetails->occupassion }}
-                    @endif
-                </td>
-                <td>
-                    @if($user->userDetails)
-                    {{ $user->userDetails->city }}
-                    @endif
-                </td>
-                <td>
-                    @if($user->userDetails){{ $user->userDetails->state }} @endif </td>
+                <td>@if($user->userDetails) {{ $user->userDetails->occupassion }} @endif </td>
+                <td>@if($user->userDetails) {{ $user->userDetails->city }} @endif </td>
+                <td>@if($user->userDetails){{ $user->userDetails->state }} @endif </td>
                 <td>@if($user->userDetails) {{ $user->userDetails->zip }} @endif </td>
             </tr>
             @endforeach

@@ -15,13 +15,26 @@ class AdminConroller extends Controller
      */
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $users = User::getUsers(5);
+        $TotalUsers = User::getUsers()->count();
+        return view('admin.dashboard', compact('users', 'TotalUsers'));
     }
 
     public function users()
     {
         $users = User::getUsers();
-       // echo "<pre>"; print_r($users); die();
         return view('admin.users', compact('users'));
+    }
+
+    public function viewUser($id)
+    {
+        $user =  User::viewUserDetails($id);
+        return view('admin.view-user',compact('user'));
+    }
+
+    public function editUser($id)
+    {
+        $user =  User::viewUserDetails($id);
+        return view('admin.edit-user',compact('user'));
     }
 }

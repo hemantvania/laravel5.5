@@ -1,15 +1,25 @@
 @extends('layouts.admin')
-        @section('content')
-        <div class="content">
-            <div class="title m-b-md">
-                Welcome to Admin
+@section('content')
+    <div class="container-fluid">
+        <h1>HI {{ Auth::user()->name }}, Welcome to Admin</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Users <span class="pull-right">( Total: {{ $TotalUsers }} )</span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item col-xs-6"><strong>Name</strong></li>
+                    <li class="list-group-item col-xs-6"><strong>Email</strong></li>
+                </ul>
+                <ul class="list-group">
+                    @foreach($users as $user)
+                    <li class="list-group-item col-xs-6">{{ $user->name }}</li>
+                        <li class="list-group-item col-xs-6">{{ $user->email }}</li>
+                    @endforeach
+                    <li class="list-group-item col-xs-12 text-center"><a href="{{ url('admin/users') }}"> View All</a></li>
+                </ul>
             </div>
-       <div class="links">
-           <a href="https://laravel.com/docs">Documentation</a>
-           <a href="https://laracasts.com">Laracasts</a>
-           <a href="https://laravel-news.com">News</a>
-           <a href="https://forge.laravel.com">Forge</a>
-           <a href="https://github.com/laravel/laravel">GitHub</a>
-       </div>
+            <div class="col-lg-6">
+
+            </div>
+        </div>
     </div>
-        @endsection
+@endsection

@@ -46,15 +46,30 @@ class User extends Authenticatable
         return $this->hasOne('App\UserDetails');
     }
 
-    public function role()
+    public function Role()
     {
-        return $this->hasOne('App\UserRoles');
+        return $this->belongsTo('App\UserRoles','role');
     }
 
-    public static function getUsers()
+    public static function getUsers($limit = 0)
     {
-        return User::where('id', '!=', Auth::user()->id)
+        $users =  self::where('id', '!=', Auth::user()->id)
+            ->orderBy('id', 'desc')
+            ->with('userDetails');
+
+        if($limit > 0)
+        {
+            $users->limit($limit);
+        }
+
+        return $users->get();
+    }
+
+    public static function viewUserDetails($id)
+    {
+        return self::where('id','=',$id)
             ->with('userDetails')
-            ->get();
+            ->with('Role')
+            ->first();
     }
 }
