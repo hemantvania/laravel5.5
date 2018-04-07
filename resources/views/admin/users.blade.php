@@ -2,6 +2,28 @@
 @section('content')
 <div class="content">
     <div class="title">Users</div>
+    @if ($message = Session::get('success'))
+
+        <div class="alert alert-success alert-block">
+
+            <button type="button" class="close" data-dismiss="alert">×</button>
+
+            <strong>{{ $message }}</strong>
+
+        </div>
+
+    @endif
+    @if ($message = Session::get('error'))
+
+        <div class="alert alert-danger alert-block">
+
+            <button type="button" class="close" data-dismiss="alert">×</button>
+
+            <strong>{{ $message }}</strong>
+
+        </div>
+
+    @endif
     <div class="container">
         <table class="table table-hover">
             <thead>
@@ -28,6 +50,9 @@
                 <td>@if($user->userDetails) {{ $user->userDetails->zip }} @endif </td>
             </tr>
             @endforeach
+            <tr>
+                <td colspan="7"><a href="{{ route('addNewUser') }}" class="btn btn-primary pull-right" >Add New User</a></td>
+            </tr>
             </tbody>
         </table>
     </div>

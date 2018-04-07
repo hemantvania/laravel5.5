@@ -38,6 +38,10 @@ Route::prefix('admin')->group(function () {
     Route::get('users', 'AdminConroller@users')->name('users');
     Route::get('view-user/userid/{id}', 'AdminConroller@viewUser')->name('viewUser');
     Route::get('edit-user/userid/{id}', 'AdminConroller@editUser')->name('editUser');
+    Route::post('edit-user/userid/{id}', 'AdminConroller@updateUser');
+    Route::get('add-new-user', 'AdminConroller@addNewUser')->name('addNewUser');
+    Route::post('add-new-user','AdminConroller@addUser')->name('addUser');
+    Route::get('delete-user/userid/{id}','AdminConroller@deleteUser');
 });
 
 //Route::name('password.email')->post('password/email', 'Auth\ForgotPasswordController@resetPassword');

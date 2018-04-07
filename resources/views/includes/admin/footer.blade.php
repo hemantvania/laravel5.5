@@ -1,2 +1,1 @@
-</body>
-</html>
+<script src="{{ asset('js/functions.js')}}"></script>

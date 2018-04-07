@@ -3,6 +3,28 @@
     <div class="container-fluid">
         <h1>View User</h1>
         <div class="row">
+            @if ($message = Session::get('success'))
+
+                <div class="alert alert-success alert-block">
+
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+
+                    <strong>{{ $message }}</strong>
+
+                </div>
+
+            @endif
+                @if ($message = Session::get('error'))
+
+                    <div class="alert alert-danger alert-block">
+
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+
+                        <strong>{{ $message }}</strong>
+
+                    </div>
+
+                @endif
             <div class="col-lg-12">
                 <h2>{{ $user->name }} <span class="pull-right"><a href="{{ url('admin/edit-user/userid/'.$user->id) }}">Edit</a></span> </h2>
                 <ul class="list-group">
@@ -36,6 +58,9 @@
                 <ul class="list-group">
                     <li class="list-group-item col-xs-3"><strong>Zip</strong></li>
                     <li class="list-group-item col-xs-9">@if($user->userDetails){{ $user->userDetails->zip }} @else &nbsp; @endif</li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item col-xs-12"><a id="deleteUser" href="{{ url('admin/delete-user/userid/'. $user->id) }}" class="btn btn-danger pull-right">Delete User</a> </li>
                 </ul>
             </div>
             <div class="col-lg-6">
